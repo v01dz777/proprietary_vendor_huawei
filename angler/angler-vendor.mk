@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     HwMMITest \
     HwSarControlService \
     ims \
+    imssettings \
     SetupSmartDeviceOverlay \
     TimeService \
     Tycho

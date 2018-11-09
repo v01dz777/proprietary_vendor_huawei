@@ -18,7 +18,6 @@
 PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/bin/ssr_setup:system/bin/ssr_setup \
     vendor/huawei/angler/proprietary/bin/subsystem_ramdump:system/bin/subsystem_ramdump \
-    vendor/huawei/angler/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/huawei/angler/proprietary/etc/permissions/com.android.omadm.service.xml:system/etc/permissions/com.android.omadm.service.xml \
     vendor/huawei/angler/proprietary/etc/permissions/com.android.sdm.plugins.connmo.xml:system/etc/permissions/com.android.sdm.plugins.connmo.xml \
     vendor/huawei/angler/proprietary/etc/permissions/com.android.sdm.plugins.sprintdm.xml:system/etc/permissions/com.android.sdm.plugins.sprintdm.xml \
@@ -37,19 +36,103 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib64/libfilterpack_facedetect.so:system/lib64/libfilterpack_facedetect.so
     
 
+# IMS
+PRODUCT_COPY_FILES += \
+    vendor/huawei/angler/proprietary/lib64/lib-imscamera.so:system/lib64/lib-imscamera.so \
+    vendor/huawei/angler/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
+    vendor/huawei/angler/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
+    vendor/huawei/angler/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
+    vendor/huawei/angler/proprietary/lib64/lib-imsvtutils.so:system/lib64/lib-imsvtutils.so \
+    vendor/huawei/angler/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
+    vendor/huawei/angler/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
+    vendor/huawei/angler/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/huawei/angler/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:system/lib64/vendor.qti.imsrtpservice@1.0.so \
+    vendor/huawei/angler/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
+    vendor/huawei/angler/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
+    vendor/huawei/angler/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-dplmedia.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-dplmedia.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-imsSDP.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsSDP.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-imsdpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsdpl.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcommon.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-rtpcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcore.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpdaemoninterface.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpsl.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
+
+# CNE
+PRODUCT_COPY_FILES += \
+    vendor/huawei/angler/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
+    vendor/huawei/angler/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
+    vendor/huawei/angler/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.api-V1.0-java.jar:system/framework/com.quicinc.cne.api-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.api-V1.1-java.jar:system/framework/com.quicinc.cne.api-V1.1-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.constants-V1.0-java.jar:system/framework/com.quicinc.cne.constants-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.constants-V2.0-java.jar:system/framework/com.quicinc.cne.constants-V2.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.constants-V2.1-java.jar:system/framework/com.quicinc.cne.constants-V2.1-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.server-V1.0-java.jar:system/framework/com.quicinc.cne.server-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.server-V2.0-java.jar:system/framework/com.quicinc.cne.server-V2.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.server-V2.1-java.jar:system/framework/com.quicinc.cne.server-V2.1-java.jar \
+    vendor/huawei/angler/proprietary/framework/com.quicinc.cne.server-V2.2-java.jar:system/framework/com.quicinc.cne.server-V2.2-java.jar \
+    vendor/huawei/angler/proprietary/framework/vendor.qti.data.factory-V1.0-java.jar:system/framework/vendor.qti.data.factory-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar:system/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/vendor.qti.hardware.data.latency-V1.0-java.jar:system/framework/vendor.qti.hardware.data.latency-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar:system/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar \
+    vendor/huawei/angler/proprietary/framework/vendor.qti.latency-V2.0-java.jar:system/framework/vendor.qti.latency-V2.0-java.jar \
+    vendor/huawei/angler/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile2.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile3.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile4.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile5.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile6.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile1.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile15.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile16.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile17.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile18.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile19.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile2.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile20.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile21.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile3.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile32.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile4.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile5.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile6.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ROW/ROW_profile7.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile1.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile2.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile3.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile4.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile5.xml \
+    vendor/huawei/angler/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile6.xml \
+    vendor/huawei/angler/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneqmiutils.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so
+
+# Timeservice
+PRODUCT_COPY_FILES += \
+    vendor/huawei/angler/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
+    vendor/huawei/angler/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so
+
 # taken from vendor.img
 # vendor/bin
 PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/bin/ATFWD-daemon:vendor/bin/ATFWD-daemon \
-    vendor/huawei/angler/proprietary/bin/cnd:vendor/bin/cnd \
     vendor/huawei/angler/proprietary/bin/diag_klog:vendor/bin/diag_klog \
     vendor/huawei/angler/proprietary/bin/diag_mdlog:vendor/bin/diag_mdlog \
     vendor/huawei/angler/proprietary/bin/diag_test_server:vendor/bin/diag_test_server \
     vendor/huawei/angler/proprietary/bin/dsm_ctrl:vendor/bin/dsm_ctrl \
-    vendor/huawei/angler/proprietary/bin/imscmservice:vendor/bin/imscmservice \
-    vendor/huawei/angler/proprietary/bin/imsdatadaemon:vendor/bin/imsdatadaemon \
-    vendor/huawei/angler/proprietary/bin/imsqmidaemon:vendor/bin/imsqmidaemon \
-    vendor/huawei/angler/proprietary/bin/ims_rtp_daemon:vendor/bin/ims_rtp_daemon \
     vendor/huawei/angler/proprietary/bin/InputEventFind:vendor/bin/InputEventFind \
     vendor/huawei/angler/proprietary/bin/irsc_util:vendor/bin/irsc_util \
     vendor/huawei/angler/proprietary/bin/loc_launcher:vendor/bin/loc_launcher \
@@ -69,8 +152,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/bin/rmt_storage:vendor/bin/rmt_storage \
     vendor/huawei/angler/proprietary/bin/slim_daemon:vendor/bin/slim_daemon \
     vendor/huawei/angler/proprietary/bin/sound_trigger_test:vendor/bin/sound_trigger_test \
-    vendor/huawei/angler/proprietary/bin/thermal-engine:vendor/bin/thermal-engine \
-    vendor/huawei/angler/proprietary/bin/time_daemon:vendor/bin/time_daemon
+    vendor/huawei/angler/proprietary/bin/thermal-engine:vendor/bin/thermal-engine
 
 # vendor/etc
 PRODUCT_COPY_FILES += \
@@ -81,7 +163,6 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/etc/acdbdata/angler/Angler_Hdmi_cal.acdb:vendor/etc/acdbdata/angler/Angler_Hdmi_cal.acdb \
     vendor/huawei/angler/proprietary/etc/acdbdata/angler/Angler_Headset_cal.acdb:vendor/etc/acdbdata/angler/Angler_Headset_cal.acdb \
     vendor/huawei/angler/proprietary/etc/acdbdata/angler/Angler_Speaker_cal.acdb:vendor/etc/acdbdata/angler/Angler_Speaker_cal.acdb \
-    vendor/huawei/angler/proprietary/etc/cne/profile.txt:vendor/etc/cne/profile.txt \
     vendor/huawei/angler/proprietary/etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml \
     vendor/huawei/angler/proprietary/etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml \
     vendor/huawei/angler/proprietary/etc/data/qmi_config.xml:vendor/etc/data/qmi_config.xml \
@@ -193,12 +274,9 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib64/libc2d30-a4xx.so:vendor/lib64/libc2d30-a4xx.so \
     vendor/huawei/angler/proprietary/lib64/libcallutils.so:vendor/lib64/libcallutils.so \
     vendor/huawei/angler/proprietary/lib64/libCB.so:vendor/lib64/libCB.so \
-    vendor/huawei/angler/proprietary/lib64/libcneapiclient.so:vendor/lib64/libcneapiclient.so \
-    vendor/huawei/angler/proprietary/lib64/libcne.so:vendor/lib64/libcne.so \
     vendor/huawei/angler/proprietary/lib64/libconfigdb.so:vendor/lib64/libconfigdb.so \
     vendor/huawei/angler/proprietary/lib64/libdiag.so:vendor/lib64/libdiag.so \
     vendor/huawei/angler/proprietary/lib64/libdisp-aba.so:vendor/lib64/libdisp-aba.so \
-    vendor/huawei/angler/proprietary/lib64/lib-dplmedia.so:vendor/lib64/lib-dplmedia.so \
     vendor/huawei/angler/proprietary/lib64/libdrmfs.so:vendor/lib64/libdrmfs.so \
     vendor/huawei/angler/proprietary/lib64/libdrmtime.so:vendor/lib64/libdrmtime.so \
     vendor/huawei/angler/proprietary/lib64/libdsi_netctrl.so:vendor/lib64/libdsi_netctrl.so \
@@ -210,19 +288,6 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib64/libhwnv.so:vendor/lib64/libhwnv.so \
     vendor/huawei/angler/proprietary/lib64/libhwsarcontrol.so:vendor/lib64/libhwsarcontrol.so \
     vendor/huawei/angler/proprietary/lib64/libidl.so:vendor/lib64/libidl.so \
-    vendor/huawei/angler/proprietary/lib64/libimscamera_jni.so:vendor/lib64/libimscamera_jni.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsdpl.so:vendor/lib64/lib-imsdpl.so \
-    vendor/huawei/angler/proprietary/lib64/libimsmedia_jni.so:vendor/lib64/libimsmedia_jni.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsqimf.so:vendor/lib64/lib-imsqimf.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsrcscmclient.so:vendor/lib64/lib-imsrcscmclient.so \
-    vendor/huawei/angler/proprietary/lib64/lib-ims-rcscmjni.so:vendor/lib64/lib-ims-rcscmjni.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsrcscmservice.so:vendor/lib64/lib-imsrcscmservice.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsrcscm.so:vendor/lib64/lib-imsrcscm.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsrcs.so:vendor/lib64/lib-imsrcs.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsSDP.so:vendor/lib64/lib-imsSDP.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imss.so:vendor/lib64/lib-imss.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsvt.so:vendor/lib64/lib-imsvt.so \
-    vendor/huawei/angler/proprietary/lib64/lib-imsxml.so:vendor/lib64/lib-imsxml.so \
     vendor/huawei/angler/proprietary/lib64/libizat_core.so:vendor/lib64/libizat_core.so \
     vendor/huawei/angler/proprietary/lib64/libkmcrypto.so:vendor/lib64/libkmcrypto.so \
     vendor/huawei/angler/proprietary/lib64/liblbs_core.so:vendor/lib64/liblbs_core.so \
@@ -262,31 +327,21 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib64/libQSEEComAPI.so:vendor/lib64/libQSEEComAPI.so \
     vendor/huawei/angler/proprietary/lib64/libqti-perfd-client.so:vendor/lib64/libqti-perfd-client.so \
     vendor/huawei/angler/proprietary/lib64/libquipc_os_api.so:vendor/lib64/libquipc_os_api.so \
-    vendor/huawei/angler/proprietary/lib64/lib-rcsimssjni.so:vendor/lib64/lib-rcsimssjni.so \
-    vendor/huawei/angler/proprietary/lib64/lib-rcsjni.so:vendor/lib64/lib-rcsjni.so \
     vendor/huawei/angler/proprietary/lib64/libril-qc-qmi-1.so:vendor/lib64/libril-qc-qmi-1.so \
     vendor/huawei/angler/proprietary/lib64/libril-qcril-hook-oem.so:vendor/lib64/libril-qcril-hook-oem.so \
     vendor/huawei/angler/proprietary/lib64/librpmb.so:vendor/lib64/librpmb.so \
     vendor/huawei/angler/proprietary/lib64/librs_adreno_sha1.so:vendor/lib64/librs_adreno_sha1.so \
     vendor/huawei/angler/proprietary/lib64/librs_adreno.so:vendor/lib64/librs_adreno.so \
     vendor/huawei/angler/proprietary/lib64/libRSDriver_adreno.so:vendor/lib64/libRSDriver_adreno.so \
-    vendor/huawei/angler/proprietary/lib64/lib-rtpcommon.so:vendor/lib64/lib-rtpcommon.so \
-    vendor/huawei/angler/proprietary/lib64/lib-rtpcore.so:vendor/lib64/lib-rtpcore.so \
-    vendor/huawei/angler/proprietary/lib64/lib-rtpdaemoninterface.so:vendor/lib64/lib-rtpdaemoninterface.so \
-    vendor/huawei/angler/proprietary/lib64/lib-rtpsl.so:vendor/lib64/lib-rtpsl.so \
     vendor/huawei/angler/proprietary/lib64/libscale.so:vendor/lib64/libscale.so \
     vendor/huawei/angler/proprietary/lib64/libsmemlog.so:vendor/lib64/libsmemlog.so \
     vendor/huawei/angler/proprietary/lib64/libssd.so:vendor/lib64/libssd.so \
     vendor/huawei/angler/proprietary/lib64/libsystem_health_mon.so:vendor/lib64/libsystem_health_mon.so \
     vendor/huawei/angler/proprietary/lib64/libthermalclient.so:vendor/lib64/libthermalclient.so \
     vendor/huawei/angler/proprietary/lib64/libthermalioctl.so:vendor/lib64/libthermalioctl.so \
-    vendor/huawei/angler/proprietary/lib64/libtime_genoff.so:vendor/lib64/libtime_genoff.so \
-    vendor/huawei/angler/proprietary/lib64/libTimeService.so:vendor/lib64/libTimeService.so \
     vendor/huawei/angler/proprietary/lib64/libtinyxml.so:vendor/lib64/libtinyxml.so \
     vendor/huawei/angler/proprietary/lib64/libtzdrmgenprov.so:vendor/lib64/libtzdrmgenprov.so \
     vendor/huawei/angler/proprietary/lib64/libvoice-svc.so:vendor/lib64/libvoice-svc.so \
-    vendor/huawei/angler/proprietary/lib64/libwms.so:vendor/lib64/libwms.so \
-    vendor/huawei/angler/proprietary/lib64/libxml.so:vendor/lib64/libxml.so \
     vendor/huawei/angler/proprietary/lib64/mediadrm/libwvdrmengine.so:vendor/lib64/mediadrm/libwvdrmengine.so \
     vendor/huawei/angler/proprietary/lib64/nfc_nci.angler.so:vendor/lib64/hw/nfc_nci.angler.so
 
@@ -363,11 +418,8 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib/libchromatix_imx377_postproc.so:vendor/lib/libchromatix_imx377_postproc.so \
     vendor/huawei/angler/proprietary/lib/libchromatix_imx377_preview.so:vendor/lib/libchromatix_imx377_preview.so \
     vendor/huawei/angler/proprietary/lib/libchromatix_imx377_snapshot.so:vendor/lib/libchromatix_imx377_snapshot.so \
-    vendor/huawei/angler/proprietary/lib/libcneapiclient.so:vendor/lib/libcneapiclient.so \
-    vendor/huawei/angler/proprietary/lib/libcne.so:vendor/lib/libcne.so \
     vendor/huawei/angler/proprietary/lib/libconfigdb.so:vendor/lib/libconfigdb.so \
     vendor/huawei/angler/proprietary/lib/libdiag.so:vendor/lib/libdiag.so \
-    vendor/huawei/angler/proprietary/lib/lib-dplmedia.so:vendor/lib/lib-dplmedia.so \
     vendor/huawei/angler/proprietary/lib/libdrmfs.so:vendor/lib/libdrmfs.so \
     vendor/huawei/angler/proprietary/lib/libdrmtime.so:vendor/lib/libdrmtime.so \
     vendor/huawei/angler/proprietary/lib/libdsi_netctrl.so:vendor/lib/libdsi_netctrl.so \
@@ -377,19 +429,6 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib/libgoog_rownr.so:vendor/lib/libgoog_rownr.so \
     vendor/huawei/angler/proprietary/lib/libgsl.so:vendor/lib/libgsl.so \
     vendor/huawei/angler/proprietary/lib/libidl.so:vendor/lib/libidl.so \
-    vendor/huawei/angler/proprietary/lib/libimscamera_jni.so:vendor/lib/libimscamera_jni.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsdpl.so:vendor/lib/lib-imsdpl.so \
-    vendor/huawei/angler/proprietary/lib/libimsmedia_jni.so:vendor/lib/libimsmedia_jni.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsqimf.so:vendor/lib/lib-imsqimf.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsrcscmclient.so:vendor/lib/lib-imsrcscmclient.so \
-    vendor/huawei/angler/proprietary/lib/lib-ims-rcscmjni.so:vendor/lib/lib-ims-rcscmjni.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsrcscmservice.so:vendor/lib/lib-imsrcscmservice.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsrcscm.so:vendor/lib/lib-imsrcscm.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsrcs.so:vendor/lib/lib-imsrcs.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsSDP.so:vendor/lib/lib-imsSDP.so \
-    vendor/huawei/angler/proprietary/lib/lib-imss.so:vendor/lib/lib-imss.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsvt.so:vendor/lib/lib-imsvt.so \
-    vendor/huawei/angler/proprietary/lib/lib-imsxml.so:vendor/lib/lib-imsxml.so \
     vendor/huawei/angler/proprietary/lib/libjpegdhw.so:vendor/lib/libjpegdhw.so \
     vendor/huawei/angler/proprietary/lib/libjpegdmahw.so:vendor/lib/libjpegdmahw.so \
     vendor/huawei/angler/proprietary/lib/libjpegehw.so:vendor/lib/libjpegehw.so \
@@ -506,8 +545,6 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib/libqomx_jpegenc.so:vendor/lib/libqomx_jpegenc.so \
     vendor/huawei/angler/proprietary/lib/libQSEEComAPI.so:vendor/lib/libQSEEComAPI.so \
     vendor/huawei/angler/proprietary/lib/libqti-perfd-client.so:vendor/lib/libqti-perfd-client.so \
-    vendor/huawei/angler/proprietary/lib/lib-rcsimssjni.so:vendor/lib/lib-rcsimssjni.so \
-    vendor/huawei/angler/proprietary/lib/lib-rcsjni.so:vendor/lib/lib-rcsjni.so \
     vendor/huawei/angler/proprietary/lib/libril-qcril-hook-oem.so:vendor/lib/libril-qcril-hook-oem.so \
     vendor/huawei/angler/proprietary/lib/librpmb.so:vendor/lib/librpmb.so \
     vendor/huawei/angler/proprietary/lib/librs_adreno_sha1.so:vendor/lib/librs_adreno_sha1.so \
@@ -515,22 +552,14 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib/libRSDriver_adreno.so:vendor/lib/libRSDriver_adreno.so \
     vendor/huawei/angler/proprietary/lib/librs.rnr_downscale.so:vendor/lib/librs.rnr_downscale.so \
     vendor/huawei/angler/proprietary/lib/librs.rnr_process.so:vendor/lib/librs.rnr_process.so \
-    vendor/huawei/angler/proprietary/lib/lib-rtpcommon.so:vendor/lib/lib-rtpcommon.so \
-    vendor/huawei/angler/proprietary/lib/lib-rtpcore.so:vendor/lib/lib-rtpcore.so \
-    vendor/huawei/angler/proprietary/lib/lib-rtpdaemoninterface.so:vendor/lib/lib-rtpdaemoninterface.so \
-    vendor/huawei/angler/proprietary/lib/lib-rtpsl.so:vendor/lib/lib-rtpsl.so \
     vendor/huawei/angler/proprietary/lib/libscale.so:vendor/lib/libscale.so \
     vendor/huawei/angler/proprietary/lib/libsmemlog.so:vendor/lib/libsmemlog.so \
     vendor/huawei/angler/proprietary/lib/libssd.so:vendor/lib/libssd.so \
     vendor/huawei/angler/proprietary/lib/libsystem_health_mon.so:vendor/lib/libsystem_health_mon.so \
     vendor/huawei/angler/proprietary/lib/libthermalclient.so:vendor/lib/libthermalclient.so \
-    vendor/huawei/angler/proprietary/lib/libtime_genoff.so:vendor/lib/libtime_genoff.so \
-    vendor/huawei/angler/proprietary/lib/libTimeService.so:vendor/lib/libTimeService.so \
     vendor/huawei/angler/proprietary/lib/libtinyxml.so:vendor/lib/libtinyxml.so \
     vendor/huawei/angler/proprietary/lib/libtzdrmgenprov.so:vendor/lib/libtzdrmgenprov.so \
     vendor/huawei/angler/proprietary/lib/libvoice-svc.so:vendor/lib/libvoice-svc.so \
-    vendor/huawei/angler/proprietary/lib/libwms.so:vendor/lib/libwms.so \
-    vendor/huawei/angler/proprietary/lib/libxml.so:vendor/lib/libxml.so \
     vendor/huawei/angler/proprietary/lib/mediadrm/libwvdrmengine.so:vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/huawei/angler/proprietary/lib/soundfx/libfmas.so:vendor/lib/soundfx/libfmas.so \
     vendor/huawei/angler/proprietary/lib/nfc_nci.angler.so:vendor/lib/hw/nfc_nci.angler.so

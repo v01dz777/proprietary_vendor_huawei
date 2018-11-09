@@ -27,17 +27,6 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := TimeService
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := TimeService/TimeService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_CLASS := APPS
-LOCAL_VENDOR_MODULE := true
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := Tycho
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := Tycho/Tycho.apk
@@ -47,14 +36,24 @@ LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
-endif
+include $(CLEAR_VARS)
+LOCAL_MODULE := ims
+LOCAL_SRC_FILES := ims/ims.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := symlinks
+LOCAL_MODULE := imssettings
+LOCAL_SRC_FILES := imssettings/imssettings.apk
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
-LOCAL_POST_INSTALL_CMD := \
-        mkdir -p $(PRODUCT_OUT)/vendor/app/ims/lib/arm64; \
-        ln -sf /vendor/lib64/libimscamera_jni.so $(PRODUCT_OUT)/vendor/app/ims/lib/arm64/libimscamera_jni.so; \
-        ln -sf /vendor/lib64/libimsmedia_jni.so $(PRODUCT_OUT)/vendor/app/ims/lib/arm64/libimsmedia_jni.so; \
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
 
-include $(BUILD_PHONY_PACKAGE)
+endif
