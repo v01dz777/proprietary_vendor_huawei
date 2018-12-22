@@ -60,7 +60,13 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
     vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
     vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
-    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.data.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@1.0.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
+    vendor/huawei/angler/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so
+
 
 # CNE
 PRODUCT_COPY_FILES += \
@@ -282,6 +288,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib64/libCB.so:vendor/lib64/libCB.so \
     vendor/huawei/angler/proprietary/lib64/libconfigdb.so:vendor/lib64/libconfigdb.so \
     vendor/huawei/angler/proprietary/lib64/libdiag.so:vendor/lib64/libdiag.so \
+    vendor/huawei/angler/proprietary/lib64/libdiag_system.so:vendor/lib64/libdiag_system.so \
     vendor/huawei/angler/proprietary/lib64/libdisp-aba.so:vendor/lib64/libdisp-aba.so \
     vendor/huawei/angler/proprietary/lib64/libdrmfs.so:vendor/lib64/libdrmfs.so \
     vendor/huawei/angler/proprietary/lib64/libdrmtime.so:vendor/lib64/libdrmtime.so \
@@ -426,6 +433,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/lib/libchromatix_imx377_snapshot.so:vendor/lib/libchromatix_imx377_snapshot.so \
     vendor/huawei/angler/proprietary/lib/libconfigdb.so:vendor/lib/libconfigdb.so \
     vendor/huawei/angler/proprietary/lib/libdiag.so:vendor/lib/libdiag.so \
+    vendor/huawei/angler/proprietary/lib/libdiag_system.so:vendor/lib/libdiag_system.so \
     vendor/huawei/angler/proprietary/lib/libdrmfs.so:vendor/lib/libdrmfs.so \
     vendor/huawei/angler/proprietary/lib/libdrmtime.so:vendor/lib/libdrmtime.so \
     vendor/huawei/angler/proprietary/lib/libdsi_netctrl.so:vendor/lib/libdsi_netctrl.so \
