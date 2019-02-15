@@ -550,3 +550,10 @@ PRODUCT_COPY_FILES += \
 # vendor/xbin
 PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/xbin/wlutil:vendor/xbin/wlutil
+
+# aptx blobs
+PRODUCT_COPY_FILES += \
+    vendor/huawei/angler/proprietary/lib/libaptXHD_encoder.so:system/lib/libaptXHD_encoder.so \
+    vendor/huawei/angler/proprietary/lib/libaptXHD_encoder.so:system/lib/libaptX_encoder.so \
+    vendor/huawei/angler/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
+    vendor/huawei/angler/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptX_encoder.so
