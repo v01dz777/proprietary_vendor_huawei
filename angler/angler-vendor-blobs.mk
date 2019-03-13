@@ -146,7 +146,7 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/firmware/fingerpr.mdt:vendor/firmware/fingerpr.mdt \
     vendor/huawei/angler/proprietary/firmware/leia_pfp_470.fw:vendor/firmware/leia_pfp_470.fw \
     vendor/huawei/angler/proprietary/firmware/leia_pm4_470.fw:vendor/firmware/leia_pm4_470.fw \
-    vendor/huawei/angler/proprietary/firmware/libpn548ad_fw.so:vendor/firmware/libpn548ad_fw.so \
+    vendor/huawei/angler/proprietary/firmware/libpn548ad_fw.so:vendor/lib/libpn548ad_fw.so \
     vendor/huawei/angler/proprietary/firmware/nanohub.full.bin:vendor/firmware/nanohub.full.bin \
     vendor/huawei/angler/proprietary/firmware/napp_list.cfg:vendor/firmware/napp_list.cfg \
     vendor/huawei/angler/proprietary/firmware/pickup_gesture.napp:vendor/firmware/pickup_gesture.napp \
